@@ -61,7 +61,7 @@ vector<vector<int>> steps(vector<vector<int>>& board, char* dx, char* dy,
 		return all_new_cells;
 }
 
-int task_1_2(int init_x, int init_y, int num_steps)
+void task_1_2(int init_x, int init_y, int num_steps)
 {
 	/*
 
@@ -88,9 +88,7 @@ int task_1_2(int init_x, int init_y, int num_steps)
 	vector<vector<int>> start_cells;
 	start_cells.push_back(start_point);
 	print_2d_vector(steps(board, dx, dy, start_cells, num_steps));
-	return 0;
 }
-
 
 
 void test_task_1_2() 
@@ -98,5 +96,5 @@ void test_task_1_2()
 	cout << "Test task_1_2" << endl;
 	cout << "Cells reachable from the corner (2,2) in two steps" << endl;
 	task_1_2(2, 2, 2);
-	
+	cout << endl;
 }
