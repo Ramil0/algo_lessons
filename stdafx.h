@@ -9,17 +9,10 @@
 
 #include <stdio.h>
 #include <tchar.h>
-// STL
 
+#include <Eigen/Dense>
 #include <string> 
 #include <iostream> 
 #include <vector>
 #include <list> 
 #include <map> 
-
-
-
-
-
-
-

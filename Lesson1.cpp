@@ -5,13 +5,14 @@
 #include <time.h>
 #include "tasks.h"
 #include "my_util.h"
-#include <iostream> // <-- STL 
-using namespace std; // HPP-styles
+#include <iostream> 
+using namespace std; 
 
 int max_stream(const vector<int>& a, int* out_index=NULL)
 {
 	/*
-	Returns the maximal element and (optionally) sets its index.
+	Возвращает максимальный элемент в векторе a и
+	(опционально) записывает его индекс в out_index.
 	*/
 	int current_max = a[0], current_index = 0;
 	for (int i = 0; i < a.size(); i++) 
@@ -29,13 +30,14 @@ int max_stream(const vector<int>& a, int* out_index=NULL)
 int oddmax_evenmin_diff(const vector<int>& a)
 {
 	/*
-	Returns the difference between the maximal odd integer (if any) and 
-	the mininmal even integer (if any). Otherwise, returns NULL.
+	Возвращает разность между максимальным нечетным и минимальным
+	четным числом в векторе a, если четные и нечетные существуют.
+	В противном случае возвращается NULL.
 	*/
 	int odd_max = NULL, even_min = NULL;
 	for (int i = 0; i < a.size(); i++) 
 	{
-		if (abs(a[i] % 2) == 1) // odd 
+		if (abs(a[i] % 2) == 1) // нечетное 
 		{
 			if (odd_max == NULL)
 			{
@@ -44,7 +46,7 @@ int oddmax_evenmin_diff(const vector<int>& a)
 			else if (a[i] > odd_max)
 				odd_max = a[i];
 		}
-		else // if (a[i] % 2 == 0) // even 
+		else // if (a[i] % 2 == 0) // четное 
 		{
 			if (even_min == NULL)
 			{
@@ -58,15 +60,16 @@ int oddmax_evenmin_diff(const vector<int>& a)
 	{
 		return odd_max - even_min;
 	}
-	else return NULL;
+	else // if (odd_max == NULL || even_min == NULL) //если не нашлось нечетных/четных чисел
+		return NULL;
 }
-
 
 
 void test_max_stream() 
 {
 	cout << "Test max_stream" << endl;
-	vector<int> a; // input 
+	// Вектор из 10 случайных целых чисел из [-9;9]
+	vector<int> a; 
 	for (int j = 0; j < 10; j++)
 	{
 		int x = (rand() % 19) - 9;
@@ -82,7 +85,8 @@ void test_max_stream()
 void test_oddmax_evenmin_diff() 
 {
 	cout << "Test oddmax_evenmin_diff" << endl;
-	vector<int> a; // input 
+	// Вектор из 10 случайных целых чисел из [-9;9]
+	vector<int> a;  
 	for (int j = 0; j < 10; j++)
 	{
 		int x = (rand() % 19) - 9;
@@ -100,6 +104,7 @@ int main(int argc, char* argv[])
 	test_oddmax_evenmin_diff();
 	test_task_1_1();
 	test_task_1_2();
+	test_task_1_3();
 	getchar();
 	return 0;
 }
