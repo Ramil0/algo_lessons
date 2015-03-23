@@ -1,10 +1,10 @@
 // Lesson1.cpp: определяет точку входа для консольного приложения.
 //
 #include "stdafx.h"
-//---------------------------------------
-
 #include <stdlib.h>
 #include <time.h>
+#include "tasks.h"
+#include "my_util.h"
 #include <iostream> // <-- STL 
 using namespace std; // HPP-styles
 
@@ -61,45 +61,45 @@ int oddmax_evenmin_diff(const vector<int>& a)
 	else return NULL;
 }
 
-void print(const vector<int>& a)
-{
-	for (int i = 0; i < a.size(); i++) 
-	{
-		cout << a[i] << " "; 
-	}
-	cout << endl;
-}
+
 
 void test_max_stream() 
 {
+	cout << "Test max_stream" << endl;
 	vector<int> a; // input 
 	for (int j = 0; j < 10; j++)
 	{
 		int x = (rand() % 19) - 9;
 		a.push_back(x); 
 	}
-	print(a);
+	print_vector(a);
 	int max, max_i;
 	max = max_stream(a, &max_i);
-	cout << max << " " << max_i << endl;
+	cout << "Result: " << max << " " << max_i << endl;
+	cout << endl;
 }
 
 void test_oddmax_evenmin_diff() 
 {
+	cout << "Test oddmax_evenmin_diff" << endl;
 	vector<int> a; // input 
 	for (int j = 0; j < 10; j++)
 	{
 		int x = (rand() % 19) - 9;
 		a.push_back(x); 
 	}
-	print(a);
-	cout << oddmax_evenmin_diff(a) << endl;
+	print_vector(a);
+	cout << "Result: " << oddmax_evenmin_diff(a) << endl;
+	cout << endl;
 }
+
 int main(int argc, char* argv[])
 {
 	srand(time(0));
 	test_max_stream();
 	test_oddmax_evenmin_diff();
+	test_task_1_1();
+	test_task_1_2();
 	getchar();
 	return 0;
 }
