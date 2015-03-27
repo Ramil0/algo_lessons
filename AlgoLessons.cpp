@@ -107,6 +107,7 @@ int main(int argc, char* argv[])
 	test_task_1_3();
 	test_task_1_4();
 	test_task_1_5();
+	test_task_1_6();
 	getchar();
 	return 0;
 }
