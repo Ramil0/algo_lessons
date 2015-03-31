@@ -1,0 +1,54 @@
+\documentclass[unicode,10pt]{beamer}
+\setbeamertemplate{caption}[numbered]
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[noend]{algorithmic}
+\usepackage{algorithm}
+
+
+\usetheme{AnnArbor}
+\usecolortheme{crane}
+\graphicspath{{pics/}}
+\definecolor{blue}{rgb}{0.00,0.00,1.00}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+
+%\usepackage{pscyr}              % шрифты
+\def\tmdefault{fsv}
+\input glyphtounicode.tex       % для поиска и копирования
+\pdfgentounicode=1
+
+\title[ML\&DM]{Программирование алгоритмов на С++}
+\author[]{Кашницкий Ю.}
+
+\begin{document}
+
+\section{Программирование алгоритмов на С++}
+\begin{frame}{Занятие 1}
+
+\begin{block}{Задача 1.4}
+Дан массив $a$ длины $n$. Найдите за один проход по массиву $max_j \sum_{k=j}^na[k]$. Ограничение по памяти -- $O(1)$.
+\end{block}
+
+\begin{block}{Задача 1.5}
+Дан массив $a$ длины $n$  без нулей. Для $k$-ого подмассива с элементами одного знака (пусть его начальный и конечный индексы -- $i_1$ и $i_2$)
+обозначим $m_k = max_j\{S_j^\prime, S_j^{\prime\prime}\}$, где $S_j^\prime = \sum_{r=i_1}^j(x_r mod\ 5 - 2)$, a $S_j^{\prime\prime} = \sum_{r=j}^{i_2}(x_r mod\ 7 - 3)$ . 
+Найти $max_k\{m_k\}$
+Ограничение по времени -- $O(n)$, по памяти -- $O(1)$.
+\end{block}
+
+\begin{block}{Задача 1.6}
+Дан массив $a$ длины $n$  без нулей. Для $k$-ого подмассива с элементами одного знака (пусть его начальный и конечный индексы -- $i_1$ и $i_2$)
+обозначим $m_k = max_j\{S_j^\prime, S_j^{\prime\prime}\}$, где $S_j^\prime = \sum_{r=i_1}^jx_r$, a $S_j^{\prime\prime} = \sum_{r=j}^{i_2}x_r$ . 
+Найти $min_k\{m_k\}$
+Ограничение по времени -- $O(n)$, по памяти -- $O(1)$.
+\end{block}
+
+\end{frame}
+\end{document}
