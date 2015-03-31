@@ -1,0 +1,26 @@
+﻿Сборка начата 29.03.2015 14:19:34.
+     1>Проект "D:\Studium\Algorithms_tutor\AlgoLessons\AlgoLessons\AlgoLessons.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\AlgoLessons.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt task_1_7.cpp
+         task_1_7.cpp
+     1>d:\studium\algorithms_tutor\algolessons\algolessons\my_util.h(11): warning C4042: arr: имеет недопустимый класс хранения
+     1>d:\studium\algorithms_tutor\algolessons\algolessons\math.h(15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Studium\Algorithms_tutor\AlgoLessons\Debug\AlgoLessons.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Studium\Algorithms_tutor\AlgoLessons\Debug\AlgoLessons.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Studium\Algorithms_tutor\AlgoLessons\Debug\AlgoLessons.lib" /MACHINE:X86 Debug\AlgoLessons.obj
+         Debug\my_util.obj
+         Debug\notes.obj
+         Debug\stdafx.obj
+         Debug\task_1_1.obj
+         Debug\task_1_1_2_new.obj
+         Debug\task_1_2.obj
+         Debug\task_1_3.obj
+         Debug\task_1_4.obj
+         Debug\task_1_5.obj
+         Debug\task_1_6.obj
+         Debug\task_1_7.obj
+         AlgoLessons.vcxproj -> D:\Studium\Algorithms_tutor\AlgoLessons\Debug\AlgoLessons.exe
+     1>Построение проекта "D:\Studium\Algorithms_tutor\AlgoLessons\AlgoLessons\AlgoLessons.vcxproj" завершено (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:00.43
