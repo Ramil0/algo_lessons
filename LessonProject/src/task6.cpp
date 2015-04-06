@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include <iostream>
-#include "my_util.h"
+#include <MathUtil.h>
 using namespace std;
 
-int task_1_6(vector<int>& a) 
+int task6(vector<int>& a) 
 {
 	// „тоб не потер€лс€ последний участок, добавл€ем в конец
 	// элемент, обратного знака с последним
@@ -40,27 +40,27 @@ int task_1_6(vector<int>& a)
 
 // #define INITVECTOR(vec1,t,values) static const t arr[] =  values; vector<t> vec1 arr, arr + sizeof(arr) / sizeof(arr[0]));
 
-void test_task_1_6()
+void test_task6()
 {
-	cout << "Test task_1_6" << endl;
+	cout << "================= Test task 6 ========================" << endl;
 	static const int arr[] =  {1,2,3,4,5};
 	vector<int> vec1 (arr, arr + sizeof(arr) / sizeof(arr[0]));
 	print_vector(vec1);
 	cout << "Expected output: 3" << endl;
-	cout << "Result: " << task_1_6(vec1) << endl;
+	cout << "Result: " << task6(vec1) << endl;
 	cout << endl;
 
 	static const int arr2[] =  {6,2,8,9};
 	vector<int> vec2 (arr2, arr2 + sizeof(arr2) / sizeof(arr2[0]));
 	print_vector(vec2);
 	cout << "Expected output: 2" << endl;
-	cout << "Result: " << task_1_6(vec2) << endl;
+	cout << "Result: " << task6(vec2) << endl;
 	cout << endl;
 
 	static const int arr3[] =  {6,2,8,9,-1,-7,-4,6,6,6};
 	vector<int> vec3 (arr3, arr3 + sizeof(arr3) / sizeof(arr3[0]));
 	print_vector(vec3);
 	cout << "Expected output: 0" << endl;
-	cout << "Result: " << task_1_6(vec3) << endl;
+	cout << "Result: " << task6(vec3) << endl;
 	cout << endl;
 }

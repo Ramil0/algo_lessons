@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "my_util.h"
+#include <MathUtil.h>
 using namespace std;
 
 vector<vector<int>> one_step(vector<vector<int>>& board, char* dx, char* dy, 
@@ -61,7 +61,7 @@ vector<vector<int>> steps(vector<vector<int>>& board, char* dx, char* dy,
 		return all_new_cells;
 }
 
-void task_1_2(int init_x, int init_y, int num_steps)
+void task2(int init_x, int init_y, int num_steps)
 {
 	/*
 
@@ -91,10 +91,10 @@ void task_1_2(int init_x, int init_y, int num_steps)
 }
 
 
-void test_task_1_2() 
+void test_task2() 
 {
-	cout << "Test task_1_2" << endl;
+	cout << "================= Test task 2 ========================" << endl;
 	cout << "Cells reachable from the corner (2,2) in two steps" << endl;
-	task_1_2(2, 2, 2);
+	task2(2, 2, 2);
 	cout << endl;
 }

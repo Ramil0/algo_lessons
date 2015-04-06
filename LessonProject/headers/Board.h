@@ -21,9 +21,16 @@ struct Board
 		Chess_Init();
 	}
 
-	~Board() 
+	inline void Free()
 	{
 		if (data) delete[] data; 
+		data = NULL; 
+		m = n = 0; 
+	}
+
+	~Board() 
+	{
+		Free();
 	}
 
 	inline char& /* rw */ operator ()(int x, int y) { return data[y*m+x]; }
@@ -32,7 +39,7 @@ struct Board
 	inline void Print(ostream& O)
 	{
 		O << "Board(" << n << " x " << m << ") -------------------------" << endl; 
-		for (int y = 0; y < n; y++)
+		for (int y = n-1; y >= 0; y--)
 		{
 			for (int x = 0; x < m; x++)
 				O << (*this)(x,y); 
@@ -42,8 +49,17 @@ struct Board
 
 	const Board& operator =(const Board& board) // x = (y = z) // всё == z
 	{
+		Free();
+		m = board.m;
+		n = board.n;
+		data = new char[m*n]; 
 		memcpy(data, board.data, n*m*sizeof(*(board.data))); // sizeof(int*) != sizeof(int&) = sizeof(int) // в байтах
 		return board;
+	}
+
+	Board(const Board& board) : m(0), n(0), data(NULL) 
+	{
+		*this = board; 
 	}
 
 	// ==============================================================================================

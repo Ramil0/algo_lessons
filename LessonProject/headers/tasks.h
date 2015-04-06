@@ -1,9 +1,11 @@
 #include "stdafx.h"
-using namespace std;
 
-void test_task_1_1();
-void test_task_1_2();
-void test_task_1_3();
-void test_task_1_4();
-void test_task_1_5();
-void test_task_1_6();
+void test_task1();
+void test_task2();
+void test_task2_new();
+void test_task3();
+void test_task4();
+void test_task5();
+void test_task6();
+void test_task7();
+void test_task8();

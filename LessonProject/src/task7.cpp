@@ -1,32 +1,31 @@
 #include "stdafx.h"
 #include <iostream>
-#include <my_util.h>
 #include <Board.h>
-#include <Math.h>
+#include <MathUtil.h>
 using namespace std;
 
-void task_1_7_addRandomLine(Board& board)
+void task7_addRandomLine(Board& board)
 {
 	
-	if (Math::randomInt(2))
+	if (MathUtil::randomInt(2))
 	{
-		int begin = Math::randomInt(board.m), end = Math::randomInt(board.m);
-		int y = Math::randomInt(board.n);
+		int begin = MathUtil::randomInt(board.m), end = MathUtil::randomInt(board.m);
+		int y = MathUtil::randomInt(board.n);
 		for (int k = min(begin, end); k < max(begin, end); k++) board(k, y) = '#';
 	}
 	else 
 	{
-		int begin = Math::randomInt(board.n), end = Math::randomInt(board.n);
-		int x = Math::randomInt(board.m);
+		int begin = MathUtil::randomInt(board.n), end = MathUtil::randomInt(board.n);
+		int x = MathUtil::randomInt(board.m);
 		for (int k = min(begin, end); k < max(begin, end); k++) board(x, k) = '#';
 	}
 }
 
-void task_1_7_genRandomBoard(Board& board)
+void task7_genRandomBoard(Board& board)
 {
-	for (int k = 0; k < 20; k++) task_1_7_addRandomLine(board);
+	for (int k = 0; k < 20; k++) task7_addRandomLine(board);
 }
-void task_1_7(Board& board)
+void task7(Board& board)
 {
 	/*
 
@@ -49,19 +48,16 @@ void task_1_7(Board& board)
 	>   o      >.  o>        >#  o#          >#  <#
 	.   v      #   #         #   #           #   #
 
-
-
-
-
-
 	*/
 }
 
-void test_task_1_7()
+void test_task7()
 {
+	cout << "================= Test task 7 ========================" << endl;
 	Board board(30, 20);
-	task_1_7_genRandomBoard(board);
+	task7_genRandomBoard(board);
 	board.Print(cout);
-	task_1_7(board);
+	task7(board);
+	cout << endl;
 	
 }

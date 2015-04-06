@@ -37,3 +37,20 @@ C cnt;
 cnt.Add(1).Add(2).Add(3).Add(5); 
 
 */
+
+/*
+
+Visual Studio files:
+
+myproj.cpp (единственный CPP-файл) 
+stdafx.cpp
+stdafx.h
+=====================================================
+
+Source files:       (platform independent) 
+
+my.h
+
+...
+
+*/
